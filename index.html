@@ -520,6 +520,18 @@
     gap: 0.8rem;
   }
 
+  .inline-link {
+    color: var(--rust);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.15s ease;
+  }
+
+  .inline-link:hover {
+    color: var(--ink);
+  }
+
   .subsection-title::before {
     content: '';
     width: 8px;
@@ -1170,7 +1182,7 @@
       <a href="#u7">U7</a>
       <a href="#u8">U8</a>
       <a href="#u9">U9</a>
-      <a href="#practice">Practice</a>
+      <a href="#practice">Practice exam</a>
     </nav>
     <div class="progress-pill" id="progress-pill">
       <span class="num" id="progress-num">0</span>/<span id="progress-total">30</span> attempted
@@ -1191,7 +1203,6 @@
 <!-- HOW TO USE -->
 <section class="block" id="how-to">
   <div class="block-header">
-    <span class="block-num">§ 01</span>
     <h2 class="block-title">How to use this guide</h2>
   </div>
   <p class="block-intro">
@@ -1224,7 +1235,6 @@
 <!-- EXAM EXPECTATIONS -->
 <section class="block" id="exam">
   <div class="block-header">
-    <span class="block-num">§ 02</span>
     <h2 class="block-title">What to expect on the exam</h2>
   </div>
   <p class="block-intro">
@@ -1287,7 +1297,6 @@
 <!-- TIMELINE -->
 <section class="block" id="timeline">
   <div class="block-header">
-    <span class="block-num">§ 03</span>
     <h2 class="block-title">Periodization quick-map</h2>
   </div>
   <p class="block-intro">
@@ -1304,8 +1313,7 @@
 <!-- PRACTICE DECK -->
 <section class="block" id="practice">
   <div class="block-header">
-    <span class="block-num">§ 09</span>
-    <h2 class="block-title">Artifact practice deck</h2>
+    <h2 class="block-title">Practice exam</h2>
   </div>
   <p class="block-intro">
     Thirty prompts from the practice retrieval set. Think it through first, <em>then</em> reveal the answer. Mark each as known or needs-review. Your progress is saved.
@@ -1835,7 +1843,7 @@ function renderUnits() {
       </div>
 
       <div class="subsection">
-        <div class="subsection-title">Retrieval check — try before reading the answers in §09</div>
+        <div class="subsection-title">Retrieval check — try before reading the answers in <a href="#practice" class="inline-link">Practice exam</a></div>
         <div class="retrieval-grid">
           ${u.retrieval.map((q, qi) => {
             const id = `${u.id}-r${qi}`;
