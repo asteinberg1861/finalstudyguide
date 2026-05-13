@@ -352,6 +352,21 @@
     line-height: 1.55;
   }
 
+  .aspect-group-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    padding: 1.5rem 0 0.5rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 0;
+  }
+
+  .aspect-group-label:first-child {
+    padding-top: 0;
+  }
+
   /* === TIMELINE === */
   .timeline {
     margin-top: 2rem;
@@ -1237,10 +1252,8 @@
   <div class="block-header">
     <h2 class="block-title">What to expect on the exam</h2>
   </div>
-  <p class="block-intro">
-    Five things to address for each artifact.
-  </p>
   <div class="five-aspects">
+    <div class="aspect-group-label">For each artifact</div>
     <div class="aspect">
       <div>
         <div class="aspect-name">Describe</div>
@@ -1265,10 +1278,17 @@
         <div class="aspect-desc">What was happening in their world that this object represents?</div>
       </div>
     </div>
+    <div class="aspect-group-label">Across all four artifacts</div>
     <div class="aspect">
       <div>
         <div class="aspect-name">Build a life narrative</div>
         <div class="aspect-desc">How did larger forces shape this person's experience? What challenges or opportunities did they face?</div>
+      </div>
+    </div>
+    <div class="aspect">
+      <div>
+        <div class="aspect-name">Explain why these items were preserved</div>
+        <div class="aspect-desc">Why did this person hold onto these specific objects? What does the collection itself tell us about who they were and the time they lived in?</div>
       </div>
     </div>
   </div>
@@ -1452,7 +1472,9 @@ const UNITS = [
       ["Free Silver", "Populist demand to coin silver to inflate currency and help farmers pay debts."],
       ["Muckrakers", "Investigative journalists exposing corruption and abuse (Jacob Riis, Ida Tarbell, Upton Sinclair)."],
       ["Tenement", "Overcrowded urban housing for immigrants and the working poor."],
-      ["New immigration", "Wave of immigrants from southern/eastern Europe starting in the 1880s."]
+      ["New immigration", "Wave of immigrants from southern/eastern Europe starting in the 1880s."],
+      ["Great Migration", "Movement of ~6 million Black Americans from the rural South to Northern and Midwestern cities, starting around WWI and continuing for decades. Driven by Jim Crow and the search for industrial jobs."],
+      ["Pullman porters", "Black men who worked as service staff on railroad sleeping cars; one of the largest sources of stable Black employment. Later organized into the Brotherhood of Sleeping Car Porters under A. Philip Randolph."]
     ],
     people: [
       ["Andrew Johnson", "Lincoln's successor; opposed Radical Reconstruction."],
@@ -1496,6 +1518,8 @@ const UNITS = [
       ["Muckraker", "Journalist exposing corruption (Riis, Tarbell, Sinclair). The Jungle led to meat inspection."],
       ["Sherman Antitrust Act (1890)", "Outlawed monopolistic practices."],
       ["Pure Food and Drug Act / Meat Inspection Act (1906)", "Progressive consumer protections."],
+      ["Triangle Shirtwaist Fire (1911)", "Factory fire in NYC that killed 146 workers, mostly young immigrant women, after locked exit doors trapped them inside. Sparked workplace safety reforms and energized the labor movement."],
+      ["ILGWU", "International Ladies' Garment Workers' Union; organized garment workers (largely young immigrant women) starting in 1900. Led the 1909 \"Uprising of the 20,000\" strike."],
       ["16th / 17th / 18th / 19th Amendments", "Income tax / direct election of senators / Prohibition / women's suffrage."],
       ["Wilson's 14 Points", "Wilson's postwar peace plan, including the League of Nations."],
       ["Isolationism", "Keeping out of foreign entanglements; defined U.S. policy after WWI."],
@@ -1507,6 +1531,8 @@ const UNITS = [
       ["Prohibition", "18th Amendment banning alcohol; produced speakeasies, bootleggers, organized crime; repealed 1933."],
       ["Flapper", "Modern young woman of the 1920s; symbol of changing gender norms."],
       ["Harlem Renaissance", "Flourishing of Black art, music, literature in 1920s (Langston Hughes, Duke Ellington, Bessie Smith)."],
+      ["The Crisis", "NAACP magazine, founded 1910 and edited by W.E.B. Du Bois. Central voice of Black intellectual and political life through the Harlem Renaissance."],
+      ["Marcus Garvey / UNIA", "Universal Negro Improvement Association; mass Black nationalist movement of the 1920s, emphasizing racial pride and Pan-African unity. Operated in tension with the more integrationist NAACP."],
       ["Mass culture", "National culture spread by radio, film, magazines; made local events (Scopes) into national spectacles."],
       ["Black Tuesday (Oct 29, 1929)", "Stock market crash that triggered the Depression."],
       ["Buying on margin", "Borrowing to buy stocks; collapsed when prices fell."],
@@ -1571,6 +1597,7 @@ const UNITS = [
       ["Lend-Lease", "Pre-Pearl Harbor aid to Britain and Allies."],
       ["Rosie the Riveter", "Symbol of women in wartime industry."],
       ["Japanese internment / Executive Order 9066", "Forced relocation of 120,000 Japanese Americans, mostly U.S. citizens, to camps."],
+      ["442nd Regimental Combat Team", "Segregated all-Japanese-American U.S. Army unit that fought in Europe, even as many of their families were still held in camps. One of the most decorated units in American military history."],
       ["Double V campaign", "Black Americans' demand for victory over fascism abroad and racism at home."],
       ["D-Day (June 6, 1944)", "Allied invasion of Normandy."],
       ["Manhattan Project / Hiroshima and Nagasaki", "Secret atomic weapons program; bombs dropped August 1945."],
@@ -1649,6 +1676,8 @@ const UNITS = [
       ["Birmingham Campaign (1963)", "King; police dogs and fire hoses on national TV."],
       ["March on Washington (Aug 28, 1963)", "\"I Have a Dream\"; 250,000 attendees."],
       ["Mississippi Freedom Summer (1964)", "Voter registration drive; three workers murdered (Goodman, Schwerner, Chaney)."],
+      ["COFO", "Council of Federated Organizations; the coalition that coordinated SNCC, CORE, NAACP, and SCLC's joint efforts in Mississippi, including Freedom Summer."],
+      ["Freedom Schools", "Alternative summer schools run during Freedom Summer (1964) that taught Black history, constitutional rights, and literacy to Mississippi children who were denied a real education by segregated state schools."],
       ["MFDP", "Mississippi Freedom Democratic Party; challenged the all-white Mississippi delegation at the 1964 DNC; Fannie Lou Hamer's testimony."],
       ["Civil Rights Act (1964)", "Banned discrimination in public accommodations and employment."],
       ["Voting Rights Act (1965)", "Federal oversight of voter registration in Southern states."],
